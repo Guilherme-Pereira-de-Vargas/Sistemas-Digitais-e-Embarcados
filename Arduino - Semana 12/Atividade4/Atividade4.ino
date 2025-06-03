@@ -1,49 +1,49 @@
 // Definindo os leds e botoes
-#define led1 11
-#define led2 12
-#define led3 13
+#define pin_led1 11
+#define pin_led2 12
+#define pin_led3 13
 
-#define botao1 1
-#define botao2 2
+#define pin_botao1 1
+#define pin_botao2 2
 void setup()
 {
- pinMode(led1, OUTPUT);
- pinMode(led2, OUTPUT);
- pinMode(led3, OUTPUT);
+ pinMode(pin_led1, OUTPUT);
+ pinMode(pin_led2, OUTPUT);
+ pinMode(pin_led3, OUTPUT);
   
- pinMode(botao1, INPUT);
- pinMode(botao2, INPUT);
+ pinMode(pin_botao1, INPUT);
+ pinMode(pin_botao2, INPUT);
 }
 
 void loop() {
  // Lendo o estado dos botões
- bool estado1 = digitalRead(botao1);
- bool estado2 = digitalRead(botao2);
+ bool estado1 = digitalRead(pin_botao1);
+ bool estado2 = digitalRead(pin_botao2);
   
   // IF LED1
   if (estado1 == 1 && estado2 == 1) {
-    digitalWrite(led1, HIGH);
+    digitalWrite(pin_led1, HIGH);
   }
   
   else {
-    digitalWrite(led1, LOW);
+    digitalWrite(pin_led1, LOW);
   }
   
   // IF LED2
   if (estado1 != estado2) {
-    digitalWrite(led2, HIGH);
+    digitalWrite(pin_led2, HIGH);
   }
   
   else {
-    digitalWrite(led2, LOW);
+    digitalWrite(pin_led2, LOW);
   }
   
   // IF LED3
   if (estado1 == 0 && estado2 == 0) {
-    digitalWrite(led3, HIGH);
+    digitalWrite(pin_led3, HIGH);
   }
   
   else {
-    digitalWrite(led3, LOW);
+    digitalWrite(pin_led3, LOW);
   }
 }
