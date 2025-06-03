@@ -30,7 +30,7 @@ void loop() {
   }
   
   // IF LED2
-  if (estado1 != estado2) {
+  if (estado1 == 1 || estado2 == 1) {
     digitalWrite(pin_led2, HIGH);
   }
   
@@ -39,7 +39,7 @@ void loop() {
   }
   
   // IF LED3
-  if (estado1 == 0 && estado2 == 0) {
+  if (estado1 == 1 != estado2 == 1) {
     digitalWrite(pin_led3, HIGH);
   }
   
