@@ -19,7 +19,7 @@ if (estado1 == 1 && soma == 0) {
  conta += 1;
  soma += 1;
 }
-if (estado1 == 0 && estado2 == 0) {
+if (estado1 == 0) {
   soma = 0;
 Serial.println(conta);
  }
